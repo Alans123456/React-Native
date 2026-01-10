@@ -5,6 +5,5 @@ export default defineSchema({
   todos: defineTable({
     text: v.string(),
     isCompleted: v.boolean(),
-    createdAt: v.number(),
   }),
 });
