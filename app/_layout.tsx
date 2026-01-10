@@ -3,7 +3,9 @@ import { ConvexProvider, ConvexReactClient } from "convex/react";
 import { Stack } from "expo-router";
 
 export default function RootLayout() {
-  const client = new ConvexReactClient(process.env.Expo_Public_CONVEX_URL!, {unsavedChangesWarning: false,});
+  const client = new ConvexReactClient(process.env.EXPO_PUBLIC_CONVEX_URL!, {
+    unsavedChangesWarning: false,
+  });
   return (
     <ConvexProvider client={client}>
       <ThemeProvider>

@@ -1,44 +1,44 @@
 import { v } from "convex/values";
 import { mutation, query } from "./_generated/server";
-export const gettodos = query({
+
+export const getTodos = query({
   handler: async (ctx) => {
-    const todos = await ctx.db.query("todos").order("desc").collect();
-    return todos;
+    return await ctx.db.query("todos").order("desc").collect();
   },
 });
 
-export const mutationAddTodo = mutation({
+export const addTodo = mutation({
   args: { text: v.string() },
   handler: async (ctx, { text }) => {
-    const todoId = await ctx.db.insert("todos", { text, isCompleted: false });
-    return todoId;
+    return await ctx.db.insert("todos", {
+      text,
+      isCompleted: false,
+    });
   },
 });
 
-export const mutationToggleTodo = mutation({
+export const toggleTodo = mutation({
   args: { id: v.id("todos") },
-  handler: async (ctx, args) => {
-    const todo = await ctx.db.get(args.id);
-    if (todo === null) {
-      throw new Error("Todo not found");
-    }
-    await ctx.db.patch(args.id, { isCompleted: !todo.isCompleted });
+  handler: async (ctx, { id }) => {
+    const todo = await ctx.db.get(id);
+    if (!todo) throw new Error("Todo not found");
+    await ctx.db.patch(id, { isCompleted: !todo.isCompleted });
   },
 });
 
-export const mutationDeleteTodo = mutation({
+export const deleteTodo = mutation({
   args: { id: v.id("todos") },
-  handler: async (ctx, args) => {
-    await ctx.db.delete(args.id);
+  handler: async (ctx, { id }) => {
+    await ctx.db.delete(id);
   },
 });
 
-export const clearall = mutation({
+export const clearAll = mutation({
   handler: async (ctx) => {
-    const allTodos = await ctx.db.query("todos").collect();
-    for (const todo of allTodos) {
+    const todos = await ctx.db.query("todos").collect();
+    for (const todo of todos) {
       await ctx.db.delete(todo._id);
     }
-    return { deleted: allTodos.length };
+    return { deleted: todos.length };
   },
 });
