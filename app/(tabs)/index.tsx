@@ -8,6 +8,7 @@ export default function Index() {
   const todos = useQuery(api.todos.getTodos);
   console.log(todos);
   const addTodo = useMutation(api.todos.addTodo);
+  const clearall = useMutation(api.todos.clearAll);
   return (
     <View style={Styles.container}>
       <Text>Finally success.</Text>
@@ -19,6 +20,9 @@ export default function Index() {
         onPress={() => addTodo({ text: "Need to practice more" })}
       >
         <Text>Add Todo</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={{ padding: 20 }} onPress={() => clearall()}>
+        <Text>Clear All</Text>
       </TouchableOpacity>
     </View>
   );
