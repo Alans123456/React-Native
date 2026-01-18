@@ -1,50 +1,28 @@
-# Welcome to your Expo app 👋
+📱 React Native Todo App
+<p align="center"> <img src="https://readme-typing-svg.demolab.com? font=Fira+Code& size=20& pause=1000& color=38BDF8& center=true& width=700& lines=React+Native+Todo+Application; Tabs+Navigation+%7C+Theme+Toggle; Real-time+Backend+with+Convex; Clean+UI+%7C+Scalable+Architecture" /> </p> <p align="center"> A modern <b>Todo List mobile app</b> built with <b>React Native</b>, featuring <b>tab navigation</b>, <b>dark/light theme toggle</b>, and a <b>real-time Convex backend</b>. </p>
+🛡 Badges
+<p align="center"> <img src="https://img.shields.io/badge/React%20Native-0.73-blue?logo=react" /> <img src="https://img.shields.io/badge/Expo-Compatible-black?logo=expo" /> <img src="https://img.shields.io/badge/Convex-Backend-purple" /> <img src="https://img.shields.io/badge/Theme-Dark%20%7C%20Light-success" /> <img src="https://img.shields.io/badge/Status-Active-success" /> </p>
+🎬 App Preview
+<p align="center"> <img src="./screenshots/todo-preview.gif" width="85%" /> </p>
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+📌 Add a screen recording GIF later — this massively boosts repo quality
 
-## Get started
+📚 Table of Contents
 
-1. Install dependencies
+✨ Features
 
-   ```bash
-   npm install
-   ```
+🧱 Tech Stack
 
-2. Start the app
+📸 Screenshots
 
-   ```bash
-   npx expo start
-   ```
+🧠 Architecture
 
-In the output, you'll find options to open the app in a
+⚙️ Installation
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+🚀 Usage
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+🛣 Roadmap
 
-## Get a fresh project
+🤝 Contributing
 
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+📄 License
