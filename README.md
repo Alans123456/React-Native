@@ -1,50 +1,214 @@
-# Welcome to your Expo app 👋
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+# 📱 React Native Todo App
 
-## Get started
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?
+  font=Fira+Code&
+  size=20&
+  pause=1000&
+  color=38BDF8&
+  center=true&
+  width=700&
+  lines=React+Native+Todo+Application;
+  Tabs+Navigation+%7C+Theme+Toggle;
+  Real-time+Backend+with+Convex;
+  Clean+UI+%7C+Scalable+Architecture" />
+</p>
 
-1. Install dependencies
+<p align="center">
+  A modern <b>Todo List mobile app</b> built with <b>React Native</b>, featuring
+  <b>tab navigation</b>, <b>dark/light theme toggle</b>, and a
+  <b>real-time Convex backend</b>.
+</p>
 
-   ```bash
-   npm install
-   ```
 
-2. Start the app
 
-   ```bash
-   npx expo start
-   ```
+## 🛡 Badges
 
-In the output, you'll find options to open the app in a
+<p align="center">
+  <img src="https://img.shields.io/badge/React%20Native-0.73-blue?logo=react" />
+  <img src="https://img.shields.io/badge/Expo-Compatible-black?logo=expo" />
+  <img src="https://img.shields.io/badge/Convex-Backend-purple" />
+  <img src="https://img.shields.io/badge/Theme-Dark%20%7C%20Light-success" />
+  <img src="https://img.shields.io/badge/Status-Active-success" />
+</p>
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
 
-## Get a fresh project
+## 🎬 App Preview
 
-When you're ready, run:
+<p align="center">
+  <img src="./screenshots/todo-preview.gif" width="85%" />
+</p>
 
-```bash
-npm run reset-project
+> 📌 *Add a screen recording GIF later — this massively boosts repo quality*
+
+
+
+## 📚 Table of Contents
+
+* [✨ Features](#-features)
+* [🧱 Tech Stack](#-tech-stack)
+* [📸 Screenshots](#-screenshots)
+* [🧠 Architecture](#-architecture)
+* [⚙️ Installation](#️-installation)
+* [🚀 Usage](#-usage)
+* [🛣 Roadmap](#-roadmap)
+* [🤝 Contributing](#-contributing)
+* [📄 License](#-license)
+
+
+
+## ✨ Features
+
+| Feature            | Description                             |
+| ------------------ | --------------------------------------- |
+| 📝 Todo CRUD       | Create, update, complete & delete todos |
+| 🗂 Tabs Navigation | Smooth bottom tab navigation            |
+| 🌙 Theme Toggle    | Light & Dark mode support               |
+| ⚡ Real-time Sync   | Convex backend with live updates        |
+| 🧠 Clean State     | Hooks & context-based architecture      |
+| 📱 Mobile-first    | Optimized for Android & iOS             |
+
+
+
+## 🎨 UI Highlights
+
+✔️ Minimal & clean design
+✔️ Smooth transitions
+✔️ Dark mode friendly
+✔️ Touch-optimized
+✔️ Scalable folder structure
+
+
+
+## 🧱 Tech Stack
+
+**Frontend**
+
+* React Native
+* Expo
+* React Navigation (Tabs)
+* Context API / Hooks
+
+**Backend**
+
+* Convex
+* Real-time queries & mutations
+
+
+
+## 📸 Screenshots
+
+<details>
+  <summary>📱 View App Screens</summary>
+
+  <p align="center">
+    <img src="./screenshots/home.png" width="30%" />
+    <img src="./screenshots/add-todo.png" width="30%" />
+    <img src="./screenshots/dark-mode.png" width="30%" />
+  </p>
+
+</details>
+
+
+
+## 🧠 Architecture
+
+<p align="center">
+  <img src="./screenshots/architecture.png" width="70%" />
+</p>
+
+```
+React Native App
+   ├── Tabs Navigation
+   ├── Screens (Todo / Add / Settings)
+   ├── Theme Context
+   └── Convex Backend
+        ├── Queries
+        └── Mutations
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
 
-## Learn more
 
-To learn more about developing your project with Expo, look at the following resources:
+## ⚙️ Installation
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```bash
+git clone https://github.com/Alans123456/React-Native.git
+cd React-Native
+npm install
+```
 
-## Join the community
+### Setup Convex
 
-Join our community of developers creating universal apps.
+```bash
+npx convex init
+npx convex deploy
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+> Add your Convex project URL to the app config.
+
+
+
+## 🚀 Run the App
+
+```bash
+npm start
+# or
+expo start
+```
+
+Scan the QR code using **Expo Go** 📱
+
+
+
+## 🔁 Convex Usage Example
+
+```js
+import { useQuery, useMutation } from "convex/react";
+
+const todos = useQuery(api.todos.getTodos);
+const addTodo = useMutation(api.todos.addTodo);
+```
+
+
+
+## 🛣 Roadmap
+
+* [x] Todo CRUD
+* [x] Tabs Navigation
+* [x] Theme Toggle
+* [x] Convex Backend
+* [ ] Todo Filters
+* [ ] Offline Support
+* [ ] Animations (Reanimated)
+* [ ] Authentication
+
+
+
+## 🤝 Contributing
+
+Contributions are welcome 🚀
+
+1. 🍴 Fork the repo
+2. 🌿 Create a feature branch
+3. 💾 Commit your changes
+4. 🚀 Open a Pull Request
+
+
+
+## 📄 License
+
+MIT License © **Alans Shrestha**
+
+
+
+<p align="center">
+  ⭐ If you like this project, give it a star!
+</p>
+
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=38BDF8&height=120&section=footer"/>
+</p>
+
+
