@@ -33,6 +33,15 @@ export const deleteTodo = mutation({
   },
 });
 
+export const updateTodo = mutation({
+  args: { id: v.id("todos"), text: v.string() },
+  handler: async (ctx, { id, text }) => {
+    const todo = await ctx.db.get(id);
+    if (!todo) throw new Error("Todo not found");
+    await ctx.db.patch(id, { text });
+  },
+});
+
 export const clearAll = mutation({
   handler: async (ctx) => {
     const todos = await ctx.db.query("todos").collect();
